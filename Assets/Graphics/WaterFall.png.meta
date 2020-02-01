@@ -137,10 +137,10 @@ TextureImporter:
       name: WaterFall_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 60
         y: 0
         width: 142
-        height: 505
+        height: 521
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,7 +158,7 @@ TextureImporter:
       name: WaterFall_1
       rect:
         serializedVersion: 2
-        x: 198
+        x: 295
         y: 0
         width: 142
         height: 521
@@ -179,7 +179,7 @@ TextureImporter:
       name: WaterFall_2
       rect:
         serializedVersion: 2
-        x: 510
+        x: 617
         y: 0
         width: 142
         height: 521
@@ -200,7 +200,7 @@ TextureImporter:
       name: WaterFall_3
       rect:
         serializedVersion: 2
-        x: 837
+        x: 931
         y: 0
         width: 142
         height: 521
@@ -221,7 +221,7 @@ TextureImporter:
       name: WaterFall_4
       rect:
         serializedVersion: 2
-        x: 1119
+        x: 1223
         y: 0
         width: 142
         height: 521
@@ -242,7 +242,7 @@ TextureImporter:
       name: WaterFall_5
       rect:
         serializedVersion: 2
-        x: 1330
+        x: 1433
         y: 0
         width: 142
         height: 521
@@ -263,7 +263,7 @@ TextureImporter:
       name: WaterFall_6
       rect:
         serializedVersion: 2
-        x: 1507
+        x: 1617
         y: 0
         width: 142
         height: 521
@@ -284,7 +284,7 @@ TextureImporter:
       name: WaterFall_7
       rect:
         serializedVersion: 2
-        x: 1717
+        x: 1820
         y: 0
         width: 142
         height: 521
@@ -305,7 +305,7 @@ TextureImporter:
       name: WaterFall_8
       rect:
         serializedVersion: 2
-        x: 1906
+        x: 2011
         y: 0
         width: 142
         height: 521
@@ -326,7 +326,7 @@ TextureImporter:
       name: WaterFall_9
       rect:
         serializedVersion: 2
-        x: 2103
+        x: 2206
         y: 0
         width: 142
         height: 521
@@ -347,7 +347,7 @@ TextureImporter:
       name: WaterFall_10
       rect:
         serializedVersion: 2
-        x: 2273
+        x: 2376
         y: 0
         width: 142
         height: 521
@@ -373,7 +373,7 @@ TextureImporter:
         width: 48
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
