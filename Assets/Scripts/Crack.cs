@@ -40,6 +40,7 @@ public class Crack : MonoBehaviour
      Destroy(Instantiate(explosionEffect, transform.position, Quaternion.identity),3);
      tempWaterFall.transform.localScale *= 2;
      transform.localScale *= 2;
+     this.gameObject.tag = "bigCrack";
     }
 
     public void spawnWaterFall() 

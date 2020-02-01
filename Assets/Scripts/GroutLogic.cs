@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GroutLogic : MonoBehaviour
 {
+    public bool isSmallGrout = true;
 
     Transform holePos = null;
 
@@ -11,19 +12,24 @@ public class GroutLogic : MonoBehaviour
     TrailRenderer myTrail;
     Vector2 firstPos;
     bool weCanTalkNow = false;
+   
 
     const float minDistanceToConsider = 0.1f;
+
+
     void Start()
     {
         myTrail = GetComponent<TrailRenderer>();
+        StartCoroutine(fadeMe());
         myTrail.enabled = false;
         firstPos = transform.position;
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "crack")
+        if ((col.gameObject.tag == "crack" && (isSmallGrout || !isSmallGrout)) || ( col.gameObject.tag == "bigCrack" && !isSmallGrout)) ;
         holePos = col.transform;
+
     }
 
     void Update()
@@ -37,6 +43,18 @@ public class GroutLogic : MonoBehaviour
         {
             QuickMaths();
         }
+    }
+    IEnumerator fadeMe()
+    {
+        Color myCol = myTrail.material.GetColor("_TintColor");
+        while (myCol.a > 0)
+        {
+            myCol.a -= Time.deltaTime;
+            myTrail.material.SetColor("_TintColor", myCol);
+            yield return new WaitForEndOfFrame();
+        }
+        Destroy(this.gameObject);
+
     }
 
     void QuickMaths()

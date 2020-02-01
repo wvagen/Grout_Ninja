@@ -40,6 +40,7 @@ public class InputManager : MonoBehaviour
         {
             lastGroutCreated.GetComponent<TrailRenderer>().startWidth *= 1.5f;
             lastGroutCreated.GetComponent<TrailRenderer>().endWidth *= 1.5f;
+            lastGroutCreated.GetComponent<GroutLogic>().isSmallGrout = false;
         }
         int randColor = Random.Range(0, startTrailColors.Length);
         lastGroutCreated.GetComponent<TrailRenderer>().startColor = startTrailColors[randColor];
