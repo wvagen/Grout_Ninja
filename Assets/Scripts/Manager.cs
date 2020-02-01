@@ -28,7 +28,9 @@ public class Manager : MonoBehaviour
             randomSpot = new Vector2(Random.Range(-xLimit.position.x,xLimit.position.x),Random.Range(-yLimit.position.x,yLimit.position.x));
         }while (isPositionNearAnotherHole(randomSpot));
 
-        GameObject tempHole = Instantiate(hole, randomSpot, Quaternion.identity);
+        Vector3 randomRotation = Vector3.zero;
+        randomRotation.z = Random.Range(0, 360);
+        GameObject tempHole = Instantiate(hole, randomSpot, Quaternion.Euler(randomRotation));
         holesCreated.Add(tempHole);
     }
     bool isPositionNearAnotherHole(Vector2 randomSpot)
