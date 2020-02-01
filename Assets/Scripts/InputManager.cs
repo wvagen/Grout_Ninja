@@ -6,10 +6,12 @@ public class InputManager : MonoBehaviour
 {
 
     public GameObject smallGrout;
+    public Color[] startTrailColors,endTrailColors;
 
     GameObject lastGroutCreated;
     Vector2 mousePos;
     bool isMouseDown = false;
+    //bool isSmallGroutSpawned = true;
 
     void Start()
     {
@@ -18,15 +20,32 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) OnDown();
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (Input.GetKey(KeyCode.LeftControl))
+                OnDown(false);
+            else
+            OnDown(true);
+
+        }
         if (Input.GetMouseButtonUp(0)) OnUp();
         if (isMouseDown) followMyMouse();
     }
 
-    void OnDown()
+    void OnDown(bool isSmallGrout)
     {
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         lastGroutCreated = Instantiate(smallGrout, mousePos, Quaternion.identity);
+        if (!isSmallGrout)
+        {
+            lastGroutCreated.GetComponent<TrailRenderer>().startWidth *= 1.5f;
+            lastGroutCreated.GetComponent<TrailRenderer>().endWidth *= 1.5f;
+        }
+        int randColor = Random.Range(0, startTrailColors.Length);
+        lastGroutCreated.GetComponent<TrailRenderer>().startColor = startTrailColors[randColor];
+        lastGroutCreated.GetComponent<TrailRenderer>().endColor = endTrailColors[randColor];
+        Manager.orderInLayer++;
+        lastGroutCreated.GetComponent<TrailRenderer>().sortingOrder = Manager.orderInLayer;
         isMouseDown = true;
     }
 

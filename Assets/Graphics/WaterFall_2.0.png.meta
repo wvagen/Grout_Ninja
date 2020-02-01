@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: f8d8e3e0d4e5308499c8f4c791115baa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4009617437090954560
+    second: WaterFall_2.0_1
+  - first:
+      213: -7585185037691331432
+    second: WaterFall_2.0_2
+  - first:
+      213: -786240808201106770
+    second: WaterFall_2.0_3
+  - first:
+      213: 8490314331699327716
+    second: WaterFall_2.0_4
+  - first:
+      213: 5284556460363898687
+    second: WaterFall_2.0_5
+  - first:
+      213: -3805911769553843765
+    second: WaterFall_2.0_6
+  - first:
+      213: -5933881667371489039
+    second: WaterFall_2.0_7
+  - first:
+      213: 6415975546183398207
+    second: WaterFall_2.0_8
+  - first:
+      213: -2143717860132779286
+    second: WaterFall_2.0_9
+  - first:
+      213: -2342986639635568021
+    second: WaterFall_2.0_10
+  - first:
+      213: -3478980883680328715
+    second: WaterFall_2.0_11
+  - first:
+      213: -5780722235895222982
+    second: WaterFall_2.0_12
+  - first:
+      213: -4055811400420624053
+    second: WaterFall_2.0_13
+  - first:
+      213: 5753541392210364159
+    second: WaterFall_2.0_14
+  - first:
+      213: -4426803625026598869
+    second: WaterFall_2.0_15
+  - first:
+      213: -4385876548638440620
+    second: WaterFall_2.0_16
+  - first:
+      213: -644311668841708447
+    second: WaterFall_2.0_17
+  - first:
+      213: -2965434678550409806
+    second: WaterFall_2.0_0
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WaterFall_2.0_1
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 1216
+        width: 61
+        height: 907
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d1c50b67adc644fa83c72207be6aeb
+      internalID: 4009617437090954560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterFall_2.0_2
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1216
+        width: 116
+        height: 907
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cac2f9d2a2dc3541b754518e8dbe3d7
+      internalID: -7585185037691331432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterFall_2.0_3
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1216
+        width: 88
+        height: 907
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6f20b55e68cce14692d98af24a7ce61
+      internalID: -786240808201106770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterFall_2.0_4
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 1219
+        width: 116
+        height: 904
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f874727d53fc65048bdeed7a4d3a3300
+      internalID: 8490314331699327716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterFall_2.0_5
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 1222
+        width: 116
+        height: 901
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d57d856d4726649af8b3682170a1a9
+      internalID: 5284556460363898687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterFall_2.0_6
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 1224
+        width: 116
+        height: 899
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c78582e7ab8462f4f8b80498689f48bf
+      internalID: -3805911769553843765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterFall_2.0_7
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 1216
+        width: 116
+        height: 907
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5155f0f8578bc4c842a218fc002538
+      internalID: -5933881667371489039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterFall_2.0_8
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 1218
+        width: 144
+        height: 905
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c86fcd22edb52a47afaeaec42c6d2a6
+      internalID: 6415975546183398207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterFall_2.0_9
+      rect:
+        serializedVersion: 2
+        x: 1933
+        y: 1216
+        width: 143
+        height: 907
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52cc3861f69a9bf429f1e99de0dc8803
+      internalID: -2143717860132779286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterFall_2.0_10
+      rect:
+        serializedVersion: 2
+        x: 2132
+        y: 1216
+        width: 117
+        height: 907
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690601942bc6ff243952af9b459a7ba2
+      internalID: -2342986639635568021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterFall_2.0_11
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 1216
+        width: 147
+        height: 907
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f8a755ebf50e84b9c68a85bfb2fb44
+      internalID: -3478980883680328715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterFall_2.0_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 114
+        height: 907
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81c707172bc46847ab2111ed8ca3773
+      internalID: -5780722235895222982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterFall_2.0_13
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 0
+        width: 143
+        height: 907
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eae8bcd2cfc59a499688fd15277b697
+      internalID: -4055811400420624053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterFall_2.0_14
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 0
+        width: 143
+        height: 907
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3561989414b81154f9979f73099178e1
+      internalID: 5753541392210364159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterFall_2.0_15
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 0
+        width: 116
+        height: 907
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b2d66cbd6081f4ca33bff725c66841
+      internalID: -4426803625026598869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterFall_2.0_16
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 0
+        width: 147
+        height: 907
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b67935b5c1c4348a49bd4cdca97761
+      internalID: -4385876548638440620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterFall_2.0_17
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 0
+        width: 114
+        height: 907
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05835263ea982354eb35656ce0232302
+      internalID: -644311668841708447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterFall_2.0_0
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1216
+        width: 101
+        height: 907
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea420c209c5c3f4db8b0547e018109d
+      internalID: -2965434678550409806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

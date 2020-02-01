@@ -22,7 +22,7 @@ public class GroutLogic : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log(col.gameObject.name);
+        if (col.gameObject.tag == "crack")
         holePos = col.transform;
     }
 
@@ -41,11 +41,13 @@ public class GroutLogic : MonoBehaviour
 
     void QuickMaths()
     {
-        distance = Vector2.Distance(transform.position, holePos.position);
+       /* distance = Vector2.Distance(transform.position, holePos.position);
         if (distance < (holePos.transform.localScale.x / 2) * Mathf.Sqrt(2))
-        {
+        {*/
+            holePos.GetComponent<Crack>().fadeAnimation();
+            holePos.GetComponent<Crack>().endLoop();
             Debug.Log("Covered");
-        }
+       // }
     }
 
 }
