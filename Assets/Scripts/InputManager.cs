@@ -49,6 +49,7 @@ public class InputManager : MonoBehaviour
         lastGroutCreated.GetComponent<TrailRenderer>().endColor = endTrailColors[randColor];
         Manager.orderInLayer++;
         lastGroutCreated.GetComponent<TrailRenderer>().sortingOrder = Manager.orderInLayer;
+        lastGroutCreated.GetComponent<SpriteRenderer>().sortingOrder = Manager.orderInLayer;
         isMouseDown = true;
     }
 

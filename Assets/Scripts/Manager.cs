@@ -86,7 +86,7 @@ public class Manager : MonoBehaviour
             finalBestScoreTxt.text += PlayerPrefs.GetInt("bestScore", 0).ToString();
         }
         finalScoreTxt.text += score.ToString();
-        
+        GetComponent<AudioSource>().enabled = false;
     }
 
 

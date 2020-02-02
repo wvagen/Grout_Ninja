@@ -11,6 +11,7 @@ public class GroutLogic : MonoBehaviour
 
     float distance;
     TrailRenderer myTrail;
+    SpriteRenderer mySprite;
     Vector2 firstPos;
     bool weCanTalkNow = false;
     bool isCalculating = false;
@@ -21,6 +22,7 @@ public class GroutLogic : MonoBehaviour
     void Start()
     {
         myTrail = GetComponent<TrailRenderer>();
+        mySprite = GetComponent<SpriteRenderer>();
         StartCoroutine(fadeMe());
         myTrail.enabled = false;
         firstPos = transform.position;
@@ -52,9 +54,12 @@ public class GroutLogic : MonoBehaviour
     IEnumerator fadeMe()
     {
         Color myCol = myTrail.material.GetColor("_TintColor");
+        Color colWhite = Color.white;
         while (myCol.a > 0)
         {
             myCol.a -= Time.deltaTime;
+            colWhite.a -= Time.deltaTime;
+            mySprite.color = colWhite;
             myTrail.material.SetColor("_TintColor", myCol);
             yield return new WaitForEndOfFrame();
         }
