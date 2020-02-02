@@ -5,6 +5,7 @@ using UnityEngine;
 public class GroutLogic : MonoBehaviour
 {
     public bool isSmallGrout = true;
+    public bool iDidWell = false;
 
     Transform holePos = null;
 
@@ -12,7 +13,7 @@ public class GroutLogic : MonoBehaviour
     TrailRenderer myTrail;
     Vector2 firstPos;
     bool weCanTalkNow = false;
-   
+    bool isCalculating = false;
 
     const float minDistanceToConsider = 0.1f;
 
@@ -27,7 +28,7 @@ public class GroutLogic : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if ((col.gameObject.tag == "crack" && (isSmallGrout || !isSmallGrout)) || ( col.gameObject.tag == "bigCrack" && !isSmallGrout)) ;
+        if ((col.gameObject.tag == "crack" && (isSmallGrout || !isSmallGrout)) || ( col.gameObject.tag == "bigCrack" && !isSmallGrout)) 
         holePos = col.transform;
 
     }
@@ -39,7 +40,7 @@ public class GroutLogic : MonoBehaviour
             weCanTalkNow = true;
             myTrail.enabled = true;
         }
-        if (weCanTalkNow && holePos != null)
+        if (weCanTalkNow && holePos != null && !isCalculating)
         {
             QuickMaths();
         }
@@ -62,9 +63,11 @@ public class GroutLogic : MonoBehaviour
        /* distance = Vector2.Distance(transform.position, holePos.position);
         if (distance < (holePos.transform.localScale.x / 2) * Mathf.Sqrt(2))
         {*/
-            holePos.GetComponent<Crack>().fadeAnimation();
-            holePos.GetComponent<Crack>().endLoop();
-            Debug.Log("Covered");
+        isCalculating = true;
+        holePos.GetComponent<Crack>().fadeAnimation();
+        iDidWell = true;
+        holePos.GetComponent<Crack>().endLoop();
+        isCalculating = false;
        // }
     }
 

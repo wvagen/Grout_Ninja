@@ -30,7 +30,7 @@ public class Crack : MonoBehaviour
         yield return new WaitForSeconds(man.crackPeriodToChangeStatus);
         animationStep++;
        if (!isHoleCovered) myAnim.SetInteger("crackStatus", animationStep);
-        yield return new WaitForSeconds(man.crackPeriodToChangeStatus);
+        yield return new WaitForSeconds(man.crackPeriodToChangeStatus * 3);
         CrackLevel3();
 
     }
@@ -38,8 +38,8 @@ public class Crack : MonoBehaviour
     void CrackLevel3()
     {
      Destroy(Instantiate(explosionEffect, transform.position, Quaternion.identity),3);
-     tempWaterFall.transform.localScale *= 2;
-     transform.localScale *= 2;
+         tempWaterFall.transform.localScale *= 2;
+         transform.localScale *= 2;
      this.gameObject.tag = "bigCrack";
     }
 
@@ -54,11 +54,12 @@ public class Crack : MonoBehaviour
     public void fadeAnimation()
     {
         StartCoroutine(fade());
+        man.incrementScore();
     }
 
     IEnumerator fade()
     {
-
+        GetComponent<Collider2D>().enabled = false;
         Color realCol = this.GetComponent<SpriteRenderer>().color;
         while (realCol.a > 0)
         {

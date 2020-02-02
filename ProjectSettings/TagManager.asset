@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - crack
+  - FxTemporaire
+  - bigCrack
   layers:
   - Default
   - TransparentFX

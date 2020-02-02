@@ -1,21 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
     public GameObject hole;
     public Transform xLimit, yLimit;
 
-    public float crackPeriodToChangeStatus = 1f;
+    public Text comboTxt, motvationalWordTxt,scoreTxt;
+    public string[] motivationWordsSet;
+    public Color[] comboColors;
+    public Animator canvasAnim;
+
+    Color initComboAndMotivationColor;
+    public float crackPeriodToChangeStatus = 2f;
 
     public List<GameObject> holesCreated = new List<GameObject>();
 
     public static int orderInLayer = 0;
+
+    int score = 0;
+    int scoreAmountToBeAdded = 5;
+    short comboAmount = 1;
+
     const float minimumDistanceBetweenHoles = 1f;
     void Start()
     {
-        InvokeRepeating("SpawnAHole", 0, 2);
+        InvokeRepeating("SpawnAHole", 0, crackPeriodToChangeStatus);
+        initComboAndMotivationColor = scoreTxt.color;
     }
 
     void Update()
@@ -51,5 +64,33 @@ public class Manager : MonoBehaviour
     }
 
 
+    public void incrementScore()
+    {
+        score += scoreAmountToBeAdded * comboAmount;
+        scoreTxt.text = score.ToString();
+        canvasAnim.Play("ScoreBumb", 0, 0);
+        if (crackPeriodToChangeStatus > 0.3f)
+        crackPeriodToChangeStatus -= 0.05f;
+    }
+
+    public void boostCombot()
+    {
+        comboAmount++;
+        comboTxt.text = "Combo x" + comboAmount.ToString();
+        comboTxt.color = comboColors[comboAmount - 2];
+        scoreTxt.color = comboColors[comboAmount - 2];
+        motvationalWordTxt.color = comboColors[comboAmount - 2];
+        motvationalWordTxt.text = motivationWordsSet[Random.Range(0, motivationWordsSet.Length)];
+        canvasAnim.Play("MotivationalWord", 0, 0);
+    }
+
+    public void resetCombo()
+    {
+        comboAmount = 1;
+        comboTxt.color = initComboAndMotivationColor;
+        motvationalWordTxt.color = initComboAndMotivationColor;
+        scoreTxt.color = initComboAndMotivationColor;
+    }
+    
 
 }
