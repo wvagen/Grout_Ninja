@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Manager : MonoBehaviour
     public Transform xLimit, yLimit;
 
     public Text comboTxt, motvationalWordTxt,scoreTxt;
+    public Text finalScoreTxt, finalBestScoreTxt;
     public string[] motivationWordsSet;
     public Color[] comboColors;
     public Animator canvasAnim;
@@ -31,12 +33,12 @@ public class Manager : MonoBehaviour
     {
         InvokeRepeating("SpawnAHole", 0, crackPeriodToChangeStatus);
         initComboAndMotivationColor = scoreTxt.color;
+        finalScoreTxt.text = "Score: ";
+        finalBestScoreTxt.text = "Best Score: ";
+        PlayerPrefs.DeleteAll();
     }
 
-    void Update()
-    {
-        
-    }
+    
 
 
 
@@ -61,9 +63,6 @@ public class Manager : MonoBehaviour
         GameObject tempHole = Instantiate(hole, randomSpot,Quaternion.Euler (randomRotation));
         tempHole.GetComponent<Crack>().man = this;
         orderInLayer++;
-      /* GameObject waterFallTemp = Instantiate(waterFall, randomSpot, Quaternion.identity);
-       waterFallTemp.transform.position = new Vector2(tempHole.transform.position.x + 0.22f, tempHole.transform.position.y + 0.57f);
-       waterFallTemp.GetComponentInChildren <SpriteRenderer>().sortingOrder = orderInLayer;*/
         holesCreated.Add(tempHole);
     }
     bool isPositionNearAnotherHole(Vector2 randomSpot)
@@ -78,6 +77,16 @@ public class Manager : MonoBehaviour
     {
         canvasAnim.Play("GameOver",0,0);
         isGameOver = true;
+        if (score > PlayerPrefs.GetInt("bestScore", 0))
+        {
+
+            finalBestScoreTxt.text += score.ToString();
+            PlayerPrefs.SetInt("bestScore", score);
+        }else{
+            finalBestScoreTxt.text += PlayerPrefs.GetInt("bestScore", 0).ToString();
+        }
+        finalScoreTxt.text += score.ToString();
+        
     }
 
 
@@ -86,15 +95,15 @@ public class Manager : MonoBehaviour
         score += scoreAmountToBeAdded * comboAmount;
         scoreTxt.text = score.ToString();
         canvasAnim.Play("ScoreBumb", 0, 0);
-        if (crackPeriodToChangeStatus > 0.3f)
-        crackPeriodToChangeStatus -= 0.05f;
+        if (crackPeriodToChangeStatus > 0.5f)
+        crackPeriodToChangeStatus -= 0.02f;
         whenToStartCoutingCombo++;
     }
 
     public void boostCombot()
     {
         if (whenToStartCoutingCombo < 100) return;
-        if (comboAmount < (comboColors.Length - 2))
+        if (comboAmount < (comboColors.Length - 1))
         comboAmount++;
         comboTxt.text = "Combo x" + comboAmount.ToString();
         comboTxt.color = comboColors[comboAmount - 2];
@@ -102,6 +111,11 @@ public class Manager : MonoBehaviour
         motvationalWordTxt.color = comboColors[comboAmount - 2];
         motvationalWordTxt.text = motivationWordsSet[Random.Range(0, motivationWordsSet.Length)];
         canvasAnim.Play("MotivationalWord", 1, 0);
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void resetCombo()
