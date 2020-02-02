@@ -28,7 +28,7 @@ public class GroutLogic : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if ((col.gameObject.tag == "crack" && (isSmallGrout || !isSmallGrout)) || ( col.gameObject.tag == "bigCrack" && !isSmallGrout)) 
+        if ((col.gameObject.tag == "crack" && isSmallGrout) || ( col.gameObject.tag == "bigCrack" && !isSmallGrout)) 
         holePos = col.transform;
 
     }
