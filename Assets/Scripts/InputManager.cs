@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InputManager : MonoBehaviour
 {
 
     public GameObject smallGrout;
     public Color[] startTrailColors,endTrailColors;
+    public Manager man;
 
     GameObject lastGroutCreated;
     Vector2 mousePos;
@@ -52,6 +54,10 @@ public class InputManager : MonoBehaviour
 
     void OnUp()
     {
+        if (lastGroutCreated.GetComponent<GroutLogic>().iDidWell)
+            man.boostCombot();
+        else
+            man.resetCombo();
         lastGroutCreated = null;
         isMouseDown = false;
     }
