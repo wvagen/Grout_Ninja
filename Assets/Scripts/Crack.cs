@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Crack : MonoBehaviour
 {
-
     public GameObject waterFall;
     public GameObject explosionEffect;
     public Transform waterFallPosition;
@@ -42,7 +41,7 @@ public class Crack : MonoBehaviour
      Destroy(Instantiate(explosionEffect, transform.position, Quaternion.identity),3);
          tempWaterFall.transform.localScale *= 2;
          transform.localScale *= 2;
-         man.waterFalls.Add(tempWaterFall);
+         
      this.gameObject.tag = "bigCrack";
     }
 
@@ -58,6 +57,7 @@ public class Crack : MonoBehaviour
     public void spawnWaterFall() 
     {
       tempWaterFall =  Instantiate(waterFall, waterFallPosition.position, Quaternion.identity);
+      man.waterFalls.Add(tempWaterFall);
       Manager.orderInLayer++;
       tempWaterFall.GetComponentInChildren<SpriteRenderer>().sortingOrder = Manager.orderInLayer;
 
